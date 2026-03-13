@@ -27,6 +27,6 @@ Una de las piezas clave de **Cat Gallery** es la capacidad de interactuar con el
 
 ## 📸 Vista Previa
 
-![Cat Gallery Preview](cat-gallery-img.jpg)
+![Cat Gallery Preview](./cat-gallery-img.jpg)
 
 
