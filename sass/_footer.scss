@@ -1,0 +1,57 @@
+@use "_variables" as *;
+
+footer {
+    margin-top: 60px;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid rgba($orange, 0.1);
+    text-align: center;
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .footer-logo {
+        font-family: $font-primary; 
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-title;
+        span { color: $orange; }
+    }
+    
+    .author-link {
+        font-family: $font-secondary; 
+        font-size: 0.9rem;
+        color: #888;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+        
+        a {
+            color: $color-title; 
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+            i { font-size: 1.1rem; }
+            
+            &:hover {
+                color: $orange;
+                transform: scale(1.05);
+            }
+        }
+    }
+    
+    .api-credit {
+        font-size: 0.75rem;
+        color: #bbb;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+    }
+}

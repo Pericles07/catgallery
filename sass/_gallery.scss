@@ -1,0 +1,113 @@
+@use "_variables" as *;
+
+#gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem; 
+  padding: 2rem; 
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
+
+.cat-card {
+  background-color: $white;
+  border-radius: 16px;
+  overflow: hidden; 
+  border: 1px solid rgba($orange, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  position: relative; 
+
+  &:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); 
+  }
+
+  img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+  }
+
+  .fav-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%; 
+    border-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.2s ease;
+    backdrop-filter: blur(4px); 
+
+    &:hover {
+      background: rgba(255, 255, 255, 1); 
+      transform: scale(1.1);
+    }
+  }
+}  
+
+.hidden {
+  display: none !important;
+}
+
+
+    
+
+#loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 500;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+
+
+#load-more {
+  display: block;
+  margin: 0.5rem auto; 
+  padding: 1rem 2rem;
+  background-color: $orange;
+  color: $white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba($orange, 0.3);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba($orange, 0.5);
+  }
+
+  
+  &.hidden {
+    display: none !important;
+  }
+}
+
+.fav-btn {
+  
+  &.is-fav {
+    background: $white;
+    transform: scale(1.25); 
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  }
+}
+
+
